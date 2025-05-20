@@ -1,24 +1,16 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Cover } from './components/cover/component-cover';
+import { WorkSection } from "./components/work/component-work-section";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Cover />} />
+        <Route path="/mis-trabajos" element={< WorkSection />} />
+      </Routes>
+    </Router>
   );
 }
 

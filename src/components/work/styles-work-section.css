@@ -1,0 +1,13 @@
+.section-my-work {
+    max-width: 1220px;
+    margin: auto;
+}
+
+.section-my-work h1 {
+    color: #96ffdc;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 50px 0;
+
+}
