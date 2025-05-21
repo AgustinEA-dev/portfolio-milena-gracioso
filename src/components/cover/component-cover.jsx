@@ -25,11 +25,7 @@ export function Cover() {
             </Link>
           </div>
         </div>
-        <div className="cover-imgs-container">
-          {/* <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" /> */}
-        </div>
+        <div className="pseudo-element-decoration"></div>
       </div>
     </section>
   );
