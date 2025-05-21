@@ -79,7 +79,8 @@ const styles = {
   slider: {
     flex: "1",
     minWidth: "300px",
-    maxWidth: "600px",
+    maxWidth: "500px",
+    heigth: "500px",
   },
   image: {
     width: "100%",
