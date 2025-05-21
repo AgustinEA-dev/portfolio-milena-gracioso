@@ -7,10 +7,10 @@ export function WorkSection() {
     <section className="section-my-work">
       <h1>Mis trabajos</h1>
       <PlayItem
-        ciclo="Latente - Poiesis"
+        cicle="Latente - Poiesis"
         title="La casa de Bernarda Alba"
         writer="Federico García Lorca"
-        director="Lola López"
+        director="Macarena Argarañas"
         rol="Adela"
         year="2022"
         imgs={[
@@ -22,7 +22,7 @@ export function WorkSection() {
         ]}
       />
       <PlayItem
-        ciclo="Expresionista - Poiesis"
+        cicle="Expresionista - Poiesis"
         title="Die Machine"
         writer="Christian Ferrer"
         director="Macarena Argarañas"
@@ -37,7 +37,7 @@ export function WorkSection() {
         ]}
       />
       <PlayItem
-        ciclo="Farsa - Poiesis"
+        cicle="Farsa - Poiesis"
         title="Se embarazan, plan, falopa"
         writer="Obra creada por alumnos"
         director="Macarena Argarañaz"
@@ -53,7 +53,7 @@ export function WorkSection() {
         ]}
       />
       <PlayItem
-        ciclo="Absurdo - Poiesis"
+        cicle="Absurdo - Poiesis"
         title="Todos en algun momento seremos desconocidos"
         writer="Tato Pavlovsky"
         director="Macarena Argarañaz"
@@ -68,7 +68,7 @@ export function WorkSection() {
         ]}
       />
       <PlayItem
-        ciclo="Melodrama - Poiesis"
+        cicle="Melodrama - Poiesis"
         title="Pueblo chico infierno grande"
         writer="Obra creada por alumnos"
         director="Lola López"

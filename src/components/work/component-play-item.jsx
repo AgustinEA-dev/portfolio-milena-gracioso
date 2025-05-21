@@ -1,11 +1,8 @@
-// components/TrabajoItem.jsx
-// components/PlayItem.jsx
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export function PlayItem({ title, writer, director, rol, year, imgs }) {
+export function PlayItem({ cicle, title, writer, director, rol, year, imgs }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -33,6 +30,9 @@ export function PlayItem({ title, writer, director, rol, year, imgs }) {
         </p>
         <p>
           <strong>Papel:</strong> {rol}
+        </p>
+        <p>
+          <strong>Ciclo:</strong> {cicle}
         </p>
         <p>
           <strong>Año:</strong> {year}

@@ -25,7 +25,7 @@ export function Cover() {
             </Link>
           </div>
         </div>
-        <div className="pseudo-element-decoration"></div>
+        <div class="cover-gradient-bottom"></div>
       </div>
     </section>
   );

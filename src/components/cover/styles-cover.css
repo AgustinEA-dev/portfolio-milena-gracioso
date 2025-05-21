@@ -48,6 +48,10 @@
     animation-delay: 4s;
 }
 
+.cover-gradient-bottom {
+    display: none;
+}
+
 @keyframes floatBox {
 
     0%,
@@ -66,7 +70,7 @@ cover-text-container */
 .cover-text-container {
     position: absolute;
     top: 10%;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -237,8 +241,19 @@ cover-text-container */
         background-position: 80% center;
         background-color: #000;
         background-image: url('../../../public/assets/imgs/img-portada.jpg');
-        background-position: center 190px;
-        border-radius: 0 20px;
+        background-position: center 200px;
+    }
+
+    .cover-gradient-bottom {
+        display: inline;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
+        pointer-events: none;
+        z-index: 1;
     }
 
     .cover-overlay {
