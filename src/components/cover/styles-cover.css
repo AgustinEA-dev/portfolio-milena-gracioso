@@ -233,8 +233,16 @@ cover-text-container */
 
 @media(max-width:490px) {
     .cover-container {
-        background-size: 160%;
+        background-size: 100%;
         background-position: 80% center;
+        background-color: #000;
+        background-image: url('../../../public/assets/imgs/img-portada.jpg');
+        background-position: center 190px;
+        border-radius: 0 20px;
+    }
+
+    .cover-overlay {
+        display: none;
     }
 
     .cover-text-container {
