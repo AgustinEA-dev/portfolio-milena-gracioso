@@ -61,10 +61,10 @@ export function WorkSection() {
         rol="Ella"
         year="2024"
         imgs={[
+          "/assets/imgs/todos-desconocidos-foto5.jpg",
           "/assets/imgs/todos-desconocidos-foto2.jpg",
           "/assets/imgs/todos-desconocidos-foto3.jpg",
           "/assets/imgs/todos-desconocidos-foto4.jpg",
-          "/assets/imgs/todos-desconocidos-foto5.jpg",
         ]}
       />
       <PlayItem

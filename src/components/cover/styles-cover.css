@@ -62,7 +62,7 @@ cover-text-container */
 .cover-text-container {
     position: absolute;
     top: 10%;
-    /* padding-left: 10px; */
+    padding-left: 10px;
     width: 60%;
     display: flex;
     flex-direction: column;
