@@ -23,7 +23,9 @@ export function Cover() {
             <Link className="link-work" to="/mis-trabajos">
               Mi trabajo
             </Link>
-            div
+          </div>
+          <div className="grid-imgs">
+            <img src="/assets/imgs/bernarda-alba-foto4.jpeg" alt="Imagen 1" />
           </div>
         </div>
         <div class="cover-gradient-bottom"></div>
