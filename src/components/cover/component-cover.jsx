@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 
-import { NavBar } from "./component-nav";
-
 import "./styles-cover.css";
 
 export function Cover() {
   return (
     <section className="cover">
-      <NavBar />
       <div className="cover-container">
         <div className="cover-overlay"></div>
         <div className="cover-text-container">
