@@ -23,6 +23,7 @@ export function Cover() {
             <Link className="link-work" to="/mis-trabajos">
               Mi trabajo
             </Link>
+            div
           </div>
         </div>
         <div class="cover-gradient-bottom"></div>

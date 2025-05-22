@@ -14,10 +14,13 @@ export function WorkSection() {
         rol="Adela"
         year="2022"
         imgs={[
-          "/assets/imgs/bernarda-alba-foto3.jpeg",
-          "/assets/imgs/bernarda-alba-foto4.jpeg",
           "/assets/imgs/bernarda-alba-foto8.jpeg",
-          "/assets/imgs/bernarda-alba-foto6.jpeg",
+          "/assets/imgs/bernarda-alba-foto3.jpeg",
+          "/assets/imgs/bernarda-alba-foto5.jpeg",
+          "/assets/imgs/bernarda-alba-foto4.jpeg",
+          "/assets/imgs/bernarda-alba-foto1.jpeg",
+          "/assets/imgs/bernarda-alba-foto2.jpeg",
+          "/assets/imgs/bernarda-alba-foto9.jpeg",
           "/assets/imgs/bernarda-alba-foto10.jpeg",
         ]}
       />
@@ -44,12 +47,10 @@ export function WorkSection() {
         rol="Aleatorio"
         year="2023"
         imgs={[
-          "/assets/imgs/e-b-p-foto6.jpeg",
-          "/assets/imgs/e-b-p-foto1.jpeg",
-          "/assets/imgs/e-b-p-foto2.jpeg",
-          "/assets/imgs/e-b-p-foto3.jpeg",
-          "/assets/imgs/e-b-p-foto4.jpeg",
-          "/assets/imgs/e-b-p-foto5.jpeg",
+          "/assets/imgs/e-b-p-foto1.jpg",
+          "/assets/imgs/e-b-p-foto3.jpg",
+          "/assets/imgs/e-b-p-foto5.jpg",
+          "/assets/imgs/e-b-p-foto6.jpg",
         ]}
       />
       <PlayItem
@@ -60,11 +61,10 @@ export function WorkSection() {
         rol="Ella"
         year="2024"
         imgs={[
-          "/assets/imgs/todos-desconocidos-foto1.jpeg",
-          "/assets/imgs/todos-desconocidos-foto2.jpeg",
-          "/assets/imgs/todos-desconocidos-foto3.jpeg",
-          "/assets/imgs/todos-desconocidos-foto4.jpeg",
-          "/assets/imgs/todos-desconocidos-foto5.jpeg",
+          "/assets/imgs/todos-desconocidos-foto2.jpg",
+          "/assets/imgs/todos-desconocidos-foto3.jpg",
+          "/assets/imgs/todos-desconocidos-foto4.jpg",
+          "/assets/imgs/todos-desconocidos-foto5.jpg",
         ]}
       />
       <PlayItem
