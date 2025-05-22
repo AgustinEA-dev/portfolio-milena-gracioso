@@ -17,15 +17,12 @@ export function Cover() {
             exploración de personajes.
           </article>
           <div className="cover-links-container">
-            <a className="link-contact" href="#">
+            <a className="link-contact" href="/contacto">
               Contacto
             </a>
             <Link className="link-work" to="/mis-trabajos">
               Mi trabajo
             </Link>
-          </div>
-          <div className="grid-imgs">
-            <img src="/assets/imgs/bernarda-alba-foto4.jpeg" alt="Imagen 1" />
           </div>
         </div>
         <div class="cover-gradient-bottom"></div>

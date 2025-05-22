@@ -142,31 +142,6 @@ cover-text-container */
     z-index: 1;
 }
 
-/* imgs-grid-container */
-.grid-imgs {
-    height: 300px;
-    display: grid;
-    grid-template-rows: 1fr;
-    gap: 10px;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.grid-imgs img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Diseño específico para 3 imágenes */
-.grid-imgs img:nth-child(1) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-}
-
 /* cover-imgs-container */
 
 .cover-imgs-container {

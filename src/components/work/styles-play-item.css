@@ -1,13 +1,16 @@
 .play-item-container {
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
     padding: 40px 20px;
+    margin: auto;
     background-color: #111;
     color: white;
     border-bottom: 1px solid #2bffb8;
+    box-shadow: 0 0 10px rgba(43, 255, 184, 0.1);
     justify-content: center;
 }
 
@@ -36,7 +39,6 @@
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-    object-position: center;
     max-height: 320px;
 }
 
@@ -48,9 +50,9 @@
 }
 
 .play-item-slider .slick-prev {
-    left: 5px;
+    left: 10px;
 }
 
 .play-item-slider .slick-next {
-    right: 5px;
+    right: 10px;
 }
