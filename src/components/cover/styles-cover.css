@@ -82,6 +82,7 @@ cover-text-container */
 .cover-article {
     color: #fff;
     font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 800px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     pointer-events: none;
