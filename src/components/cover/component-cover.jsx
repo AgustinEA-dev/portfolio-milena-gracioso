@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { CustomLink } from "../custom-link/component-custom-link";
 
 import "./styles-cover.css";
 
@@ -14,12 +14,8 @@ export function Cover() {
             exploración de personajes.
           </article>
           <div className="cover-links-container">
-            <a className="link-contact" href="/contacto">
-              Contacto
-            </a>
-            <Link className="link-work" to="/mis-trabajos">
-              Mi trabajo
-            </Link>
+            <CustomLink type="Contact" route="/contacto" />
+            <CustomLink type="Mis trabajos" route="/mis-trabajos" />
           </div>
         </div>
         <div class="cover-gradient-bottom"></div>

@@ -1,4 +1,5 @@
 import { PlayItem } from "./component-play-item";
+import { CustomLink } from "../custom-link/component-custom-link";
 
 import "./styles-work-section.css";
 
@@ -84,8 +85,8 @@ export function WorkSection() {
       />
       {/* Podés repetir con más obras */}
       <div className="work-links-container">
-        <a href="/">Volver a la portada</a>
-        <a href="/contacto">Contacto</a>
+        <CustomLink type="Home" route="/" />
+        <CustomLink type="Contacto" route="/contacto" />
       </div>
     </section>
   );
