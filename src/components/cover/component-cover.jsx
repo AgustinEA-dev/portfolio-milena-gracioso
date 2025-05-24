@@ -14,8 +14,12 @@ export function Cover() {
             exploración de personajes.
           </article>
           <div className="cover-links-container">
-            <CustomLink type="Contact" route="/contacto" />
-            <CustomLink type="Mis trabajos" route="/mis-trabajos" />
+            <CustomLink type="Contacto" route="/contacto" variant="secondary" />
+            <CustomLink
+              type="Mis trabajos"
+              route="/mis-trabajos"
+              variant="primary"
+            />
           </div>
         </div>
         <div class="cover-gradient-bottom"></div>

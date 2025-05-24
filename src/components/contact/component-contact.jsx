@@ -28,8 +28,12 @@ export function ContactForm() {
         </form>
       </section>
       <div className="contact-links-container">
-        <CustomLink type="Home" route="/" />
-        <CustomLink type="Mis trabajos" route="/mis-trabajos" />
+        <CustomLink type="Home" route="/" variant="secondary" />
+        <CustomLink
+          type="Mis trabajos"
+          route="/mis-trabajos"
+          variant="primary"
+        />
       </div>
     </>
   );

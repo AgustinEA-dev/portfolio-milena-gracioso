@@ -85,8 +85,8 @@ export function WorkSection() {
       />
       {/* Podés repetir con más obras */}
       <div className="work-links-container">
-        <CustomLink type="Home" route="/" />
-        <CustomLink type="Contacto" route="/contacto" />
+        <CustomLink type="Home" route="/" variant="secondary" />
+        <CustomLink type="Contacto" route="/contacto" variant="primary" />
       </div>
     </section>
   );
