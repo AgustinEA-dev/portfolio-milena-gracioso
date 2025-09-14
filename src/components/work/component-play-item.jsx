@@ -30,7 +30,7 @@ export function PlayItem({ cicle, title, writer, director, rol, year, imgs }) {
           <strong>Dirección:</strong> {director}
         </p>
         <p>
-          <strong>Papel:</strong> {rol}
+          <strong>Personaje:</strong> {rol}
         </p>
         <p>
           <strong>Ciclo:</strong> {cicle}

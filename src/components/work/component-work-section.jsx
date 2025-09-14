@@ -43,9 +43,9 @@ export function WorkSection() {
       <PlayItem
         cicle="Farsa - Poiesis"
         title="Se embarazan, plan, falopa"
-        writer="Obra creada por alumnos"
+        writer="Creación grupal a partir de la improvisación."
         director="Macarena Argarañaz"
-        rol="Aleatorio"
+        rol="Religiosa"
         year="2023"
         imgs={[
           "/assets/imgs/e-b-p-foto1.jpg",
@@ -71,9 +71,9 @@ export function WorkSection() {
       <PlayItem
         cicle="Melodrama - Poiesis"
         title="Pueblo chico infierno grande"
-        writer="Obra creada por alumnos"
-        director="Lola López"
-        rol="Aleatorio"
+        writer="Creación grupal a partir de la improvisación."
+        director="Macarena Argarañaz"
+        rol="Vecina"
         year="2024"
         imgs={[
           "/assets/imgs/p-c-i-g-foto1.jpeg",
@@ -81,6 +81,22 @@ export function WorkSection() {
           "/assets/imgs/p-c-i-g-foto3.jpeg",
           "/assets/imgs/p-c-i-g-foto4.jpeg",
           "/assets/imgs/p-c-i-g-foto5.jpeg",
+        ]}
+      />
+      <PlayItem
+        cicle="Distanciamiento - Absurdo - Poiesis"
+        title="Algo pasa en el agua"
+        writer="Adaptación de Atando cabos de Griselda Gambaro"
+        director="Macarena Argarañaz"
+        rol="Elisa"
+        year="2025"
+        imgs={[
+          "/assets/imgs/algo-pasa-agua-foto1.jpg",
+          "/assets/imgs/algo-pasa-agua-foto2.jpg",
+          "/assets/imgs/algo-pasa-agua-foto3.jpg",
+          "/assets/imgs/algo-pasa-agua-foto4.jpg",
+          "/assets/imgs/algo-pasa-agua-foto5.jpg",
+          "/assets/imgs/algo-pasa-agua-foto6.jpg",
         ]}
       />
       {/* Podés repetir con más obras */}
