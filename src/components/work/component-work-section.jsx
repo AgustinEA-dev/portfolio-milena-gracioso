@@ -35,7 +35,7 @@ export function WorkSection() {
         imgs={[
           "/assets/imgs/die-machine-foto5.jpg",
           "/assets/imgs/die-machine-foto1.jpeg",
-          "/assets/imgs/die-machine-foto2.jpeg",
+          // "/assets/imgs/die-machine-foto2.jpeg",
           "/assets/imgs/die-machine-foto3.jpeg",
           "/assets/imgs/die-machine-foto4.jpeg",
         ]}
