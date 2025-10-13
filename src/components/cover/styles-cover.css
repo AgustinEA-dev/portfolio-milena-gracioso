@@ -178,6 +178,22 @@ cover-text-container */
     transform: translateY(-2px);
 }
 
+.custom-link.menu {
+    color: white;
+    margin-top: 0;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1.5rem;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.custom-link.menu:hover {
+    background-color: #222;
+    color: #2bffb8;
+    transform: translateY(-2px);
+}
 
 /* cover-imgs-container */
 

@@ -3,7 +3,7 @@ import { Cover } from './components/cover/component-cover';
 import { WorkSection } from "./components/work/component-work-section";
 import { ContactForm } from "./components/contact/component-contact";
 import { NavBar } from "./components/cover/component-nav";
-import './App.css';
+
 
 function App() {
   return (
