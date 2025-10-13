@@ -49,3 +49,20 @@ nav button {
 .dropdown-menu li a:hover {
     background-color: #222;
 }
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 900;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.closing {
+    opacity: 0;
+}

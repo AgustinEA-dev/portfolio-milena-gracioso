@@ -8,8 +8,18 @@ import "./styles-nav.css";
 
 export function NavBar() {
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
+
   const toggleMenu = () => {
-    setOpen((prev) => !prev);
+    if (open) {
+      setClosing(true); // iniciamos animación de cierre
+      setTimeout(() => {
+        setOpen(false);
+        setClosing(false);
+      }, 300); // mismo tiempo que la animación CSS
+    } else {
+      setOpen(true);
+    }
   };
   return (
     <header>
@@ -18,8 +28,8 @@ export function NavBar() {
         <button onClick={toggleMenu} aria-expanded={open} aria-label="menu">
           <HamburgerIcon classname="bars" />
         </button>
-        {open && (
-          <ul className="dropdown-menu">
+        {(open || closing) && (
+          <ul className={`dropdown-menu ${closing ? "closing" : ""}`}>
             <li>
               <CustomLink type="Home" route="/" variant="menu" />
             </li>
@@ -34,6 +44,43 @@ export function NavBar() {
               <CustomLink type="Contacto" route="/contacto" variant="menu" />
             </li>
           </ul>
+        )}
+        {(open || closing) && (
+          <>
+            {/* Overlay */}
+            <div
+              className={`menu-overlay ${closing ? "closing" : ""}`}
+              onClick={toggleMenu}
+            ></div>
+
+            {/* Menú desplegable */}
+            <ul className={`dropdown-menu ${closing ? "closing" : ""}`}>
+              <li>
+                <CustomLink
+                  type="Home"
+                  route="/"
+                  variant="menu"
+                  onClick={toggleMenu}
+                />
+              </li>
+              <li>
+                <CustomLink
+                  type="Mis trabajos"
+                  route="/mis-trabajos"
+                  variant="menu"
+                  onClick={toggleMenu}
+                />
+              </li>
+              <li>
+                <CustomLink
+                  type="Contacto"
+                  route="/contacto"
+                  variant="menu"
+                  onClick={toggleMenu}
+                />
+              </li>
+            </ul>
+          </>
         )}
       </nav>
     </header>
