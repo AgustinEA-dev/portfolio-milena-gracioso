@@ -1,0 +1,20 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 1; /* debajo del navbar */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Variante específica para el cover (por si después querés más overlays en otras secciones) */
+.overlay-cover {
+  /* Podés ajustar esto si el cover tiene estructura especial */
+}
