@@ -1,86 +1,64 @@
 import { useState } from "react";
-
+import { useMenu } from "../../context/context-menu";
 import { CustomLink } from "../custom-link/component-custom-link";
-
 import HamburgerIcon from "../icons/component-bars-icon";
-
 import "./styles-nav.css";
 
 export function NavBar() {
-  const [open, setOpen] = useState(false);
+  const { menuOpen, toggleMenu, closeMenu } = useMenu();
   const [closing, setClosing] = useState(false);
 
-  const toggleMenu = () => {
-    if (open) {
-      setClosing(true); // iniciamos animación de cierre
+  const handleToggle = () => {
+    if (menuOpen) {
+      setClosing(true);
       setTimeout(() => {
-        setOpen(false);
+        closeMenu();
         setClosing(false);
-      }, 300); // mismo tiempo que la animación CSS
+      }, 300);
     } else {
-      setOpen(true);
+      toggleMenu();
     }
   };
+
   return (
     <header>
       <nav>
         <span>Milena Gracioso</span>
-        <button onClick={toggleMenu} aria-expanded={open} aria-label="menu">
-          <HamburgerIcon classname="bars" />
+        <button
+          onClick={handleToggle}
+          aria-expanded={menuOpen}
+          aria-label="menu"
+        >
+          <HamburgerIcon className="bars" />
         </button>
-        {(open || closing) && (
+
+        {(menuOpen || closing) && (
           <ul className={`dropdown-menu ${closing ? "closing" : ""}`}>
             <li>
-              <CustomLink type="Home" route="/" variant="menu" />
+              <CustomLink
+                type="Home"
+                route="/"
+                variant="menu"
+                onClick={handleToggle}
+              />
             </li>
             <li>
               <CustomLink
                 type="Mis trabajos"
                 route="/mis-trabajos"
                 variant="menu"
+                onClick={handleToggle}
               />
             </li>
             <li>
-              <CustomLink type="Contacto" route="/contacto" variant="menu" />
+              <CustomLink
+                type="Contacto"
+                route="/contacto"
+                variant="menu"
+                onClick={handleToggle}
+              />
             </li>
           </ul>
-        )}
-        {(open || closing) && (
-          <>
-            {/* Overlay */}
-            <div
-              className={`menu-overlay ${closing ? "closing" : ""}`}
-              onClick={toggleMenu}
-            ></div>
-
-            {/* Menú desplegable */}
-            <ul className={`dropdown-menu ${closing ? "closing" : ""}`}>
-              <li>
-                <CustomLink
-                  type="Home"
-                  route="/"
-                  variant="menu"
-                  onClick={toggleMenu}
-                />
-              </li>
-              <li>
-                <CustomLink
-                  type="Mis trabajos"
-                  route="/mis-trabajos"
-                  variant="menu"
-                  onClick={toggleMenu}
-                />
-              </li>
-              <li>
-                <CustomLink
-                  type="Contacto"
-                  route="/contacto"
-                  variant="menu"
-                  onClick={toggleMenu}
-                />
-              </li>
-            </ul>
-          </>
         )}
       </nav>
     </header>

@@ -4,6 +4,14 @@
     background-color: #000000;
 }
 
+.menu-overlay-inside-cover {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
 .cover-container {
     position: relative;
     background-image: url('../../../public/assets/imgs/img-portada.jpeg');
@@ -65,14 +73,14 @@ cover-text-container */
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    z-index: 1;
 }
 
 .cover-title {
     width: 100%;
     color: #96ffdc;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 60px;
+    font-size: 70px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     pointer-events: none;
     user-select: none;
@@ -93,7 +101,7 @@ cover-text-container */
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
-    z-index: 2;
+    z-index: 1;
 }
 
 .cover-links-container::before {
@@ -321,4 +329,3 @@ cover-text-container */
 
 }
 
-@media(max-width:390px) {}

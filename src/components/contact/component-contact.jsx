@@ -1,4 +1,5 @@
 import { CustomLink } from "../custom-link/component-custom-link";
+import { Overlay } from "../custom-overlay/component-custom-overlay";
 
 import "./styles-contact.css";
 
@@ -6,6 +7,7 @@ export function ContactForm() {
   return (
     <>
       <section className="contact-section">
+        <Overlay variant="cover" />
         <h2 className="contact-title">Contacto</h2>
         <form className="contact-form">
           <label>
@@ -26,15 +28,15 @@ export function ContactForm() {
           </label>
           <button type="submit">Enviar mensaje</button>
         </form>
+        <div className="contact-links-container">
+          <CustomLink type="Home" route="/" variant="secondary" />
+          <CustomLink
+            type="Mis trabajos"
+            route="/mis-trabajos"
+            variant="primary"
+          />
+        </div>
       </section>
-      <div className="contact-links-container">
-        <CustomLink type="Home" route="/" variant="secondary" />
-        <CustomLink
-          type="Mis trabajos"
-          route="/mis-trabajos"
-          variant="primary"
-        />
-      </div>
     </>
   );
 }

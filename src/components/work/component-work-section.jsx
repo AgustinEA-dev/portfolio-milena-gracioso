@@ -1,11 +1,13 @@
 import { PlayItem } from "./component-play-item";
 import { CustomLink } from "../custom-link/component-custom-link";
+import { Overlay } from "../custom-overlay/component-custom-overlay";
 
 import "./styles-work-section.css";
 
 export function WorkSection() {
   return (
     <section className="section-my-work">
+      <Overlay />
       <h1>Mis trabajos</h1>
       <PlayItem
         cicle="Latente - Poiesis"

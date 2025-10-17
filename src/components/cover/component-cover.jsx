@@ -1,4 +1,5 @@
 import { CustomLink } from "../custom-link/component-custom-link";
+import { Overlay } from "../custom-overlay/component-custom-overlay";
 
 import "./styles-cover.css";
 
@@ -6,6 +7,7 @@ export function Cover() {
   return (
     <section className="cover">
       <div className="cover-container">
+        <Overlay variant="cover" />
         <div className="cover-overlay"></div>
         <div className="cover-text-container">
           <h1 className="cover-title">MILENA GRACIOSO</h1>
@@ -22,7 +24,7 @@ export function Cover() {
             />
           </div>
         </div>
-        <div class="cover-gradient-bottom"></div>
+        <div className="cover-gradient-bottom"></div>
       </div>
     </section>
   );
