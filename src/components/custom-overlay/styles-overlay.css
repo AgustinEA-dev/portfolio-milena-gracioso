@@ -5,7 +5,7 @@
   backdrop-filter: blur(4px);
   opacity: 0;
   animation: fadeIn 0.3s ease forwards;
-  z-index: 1; /* debajo del navbar */
+  z-index: 2;
 }
 
 @keyframes fadeIn {
