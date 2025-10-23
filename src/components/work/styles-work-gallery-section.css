@@ -1,0 +1,101 @@
+.work-gallery-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.work-gallery-section::before,
+.work-gallery-section::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #96ffdc;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: floatBox 8s ease-in-out infinite;
+    border-radius: 40px;
+}
+
+.work-gallery-section::before {
+    top: -10px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+}
+
+.work-gallery-section::after {
+    bottom: -20px;
+    right: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    animation-delay: 4s;
+}
+
+/* --- TITULO --- */
+.gallery-title {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #2bffb8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.gallery-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+@keyframes floatBox {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .work-gallery-section {
+        width: 80%;
+        padding: 20px 0;
+    }
+
+    .gallery-item {
+        border-radius: 12px;
+    }
+}

@@ -1,7 +1,12 @@
 .section-my-work {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
+    padding: 50px 0;
+    background: radial-gradient(circle at center, #512edb1a 0%, #000 70%);
 }
 
 .section-my-work::before,
@@ -11,8 +16,8 @@
     border: 2px solid #96ffdc;
     opacity: 0.1;
     pointer-events: none;
-    animation: floatBox 8s ease-in-out infinite;
     border-radius: 40px;
+    animation: floatBox 8s ease-in-out infinite;
 }
 
 .section-my-work::before {
@@ -30,20 +35,47 @@
     animation-delay: 4s;
 }
 
+@keyframes floatBox {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
 .section-my-work h1 {
     color: #96ffdc;
-    font-size: 50px;
+    font-size: 48px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    padding: 50px 0;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
 
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+}
+
+.work-grid>* {
+    width: 100%;
+    max-width: 550px;
 }
 
 .work-links-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin: 3rem auto;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
@@ -62,12 +94,34 @@
 .work-links-container a:hover {
     background-color: #2bffb8;
     color: #000;
-    box-shadow: 2px 2px 10px rgba(43, 255, 184, 0.5);
     transform: translateY(-2px);
+    box-shadow: 2px 2px 10px rgba(43, 255, 184, 0.5);
 }
 
-@media (max-width:830px) {
-    .section-my-work {
-        margin: 20px;
+@media (max-width: 1024px) {
+    .section-my-work h1 {
+        font-size: 38px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-my-work h1 {
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+
+    .work-grid {
+        gap: 1.5rem;
+    }
+
+    .work-links-container a {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }

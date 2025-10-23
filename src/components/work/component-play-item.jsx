@@ -1,24 +1,28 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import { Link } from "react-router-dom";
 import "./styles-play-item.css";
 
-export function PlayItem({ cicle, title, writer, director, rol, year, imgs }) {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    appendArrows: (arrows) => (
-      <div className="custom-arrows-wrapper">{arrows}</div>
-    ),
-  };
+export function PlayItem({
+  id,
+  cicle,
+  title,
+  writer,
+  director,
+  rol,
+  year,
+  imgs,
+  modo = "preview", // "preview" o "galeria"
+}) {
+  // En modo "preview" mostramos solo la primera imagen
+  // En modo "galeria" mostramos todas o las restantes
+  const imgsToShow =
+    modo === "preview"
+      ? imgs.slice(0, 1)
+      : imgs.length > 1
+      ? imgs.slice(1)
+      : imgs;
 
   return (
-    <div className="play-item-container">
+    <div className={`play-item-container ${modo}`}>
       <div className="play-item-info">
         <h2 className="play-item-title">{title}</h2>
         {writer && (
@@ -40,19 +44,23 @@ export function PlayItem({ cicle, title, writer, director, rol, year, imgs }) {
         </p>
       </div>
 
-      <div className="play-item-slider">
-        <Slider {...settings}>
-          {imgs.map((img, i) => (
-            <div key={i}>
-              <img
-                src={img}
-                alt={`${title} ${i + 1}`}
-                className="play-item-image"
-              />
+      {modo === "preview" ? (
+        <img src={imgsToShow[0]} alt={title} className="play-item-image" />
+      ) : (
+        <div className="play-item-gallery">
+          {imgsToShow.map((img, i) => (
+            <div key={i} className="gallery-item">
+              <img src={img} alt={`${title} ${i + 1}`} />
             </div>
           ))}
-        </Slider>
-      </div>
+        </div>
+      )}
+
+      {modo === "preview" && (
+        <Link to={`/obra/${id}`} className="play-item-link">
+          Ver todas las fotos
+        </Link>
+      )}
     </div>
   );
 }
