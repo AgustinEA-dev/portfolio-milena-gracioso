@@ -8,7 +8,6 @@
     color: white;
     border: 1px solid rgba(43, 255, 184, 0.3);
     border-radius: 20px;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 600px;
@@ -69,6 +68,15 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(43, 255, 184, 0.4);
 }
+
+@media (max-width: 500px) {
+    .play-item-image {
+        aspect-ratio: 2 / 3;
+        /* más vertical */
+        object-fit: cover;
+    }
+}
+
 
 @media (max-width: 600px) {
     .play-item-container {
