@@ -10,10 +10,8 @@ export function PlayItem({
   rol,
   year,
   imgs,
-  modo = "preview", // "preview" o "galeria"
+  modo = "preview",
 }) {
-  // En modo "preview" mostramos solo la primera imagen
-  // En modo "galeria" mostramos todas o las restantes
   const imgsToShow =
     modo === "preview"
       ? imgs.slice(0, 1)
