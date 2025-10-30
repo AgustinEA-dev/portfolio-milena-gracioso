@@ -9,7 +9,7 @@ export function WorkSection() {
   return (
     <section className="section-my-work">
       <Overlay />
-      <h1>Mis trabajos</h1>
+      <h1>OBRAS</h1>
       <div className="work-grid">
         {plays.map((obra) => (
           <PlayItem key={obra.id} {...obra} modo="preview" />

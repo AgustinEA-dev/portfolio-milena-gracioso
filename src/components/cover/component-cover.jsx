@@ -18,7 +18,7 @@ export function Cover() {
           <div className="cover-links-container">
             <CustomLink type="Contacto" route="/contacto" variant="secondary" />
             <CustomLink
-              type="Mis trabajos"
+              type="Ver obras"
               route="/mis-trabajos"
               variant="primary"
             />

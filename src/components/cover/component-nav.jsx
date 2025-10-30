@@ -1,3 +1,4 @@
+// ...existing code...
 import { useState } from "react";
 import { useMenu } from "../../context/context-menu";
 import { CustomLink } from "../custom-link/component-custom-link";
@@ -21,9 +22,17 @@ export function NavBar() {
   };
 
   return (
-    <header>
+    <header className={menuOpen || closing ? "menu-open" : ""}>
+      {(menuOpen || closing) && (
+        <div
+          className={`menu-overlay ${closing ? "closing" : ""}`}
+          onClick={handleToggle}
+          aria-hidden="true"
+        />
+      )}
+      
       <nav>
-        <span>Milena Gracioso</span>
+        <span className="logo">Milena Gracioso</span>
         <button
           onClick={handleToggle}
           aria-expanded={menuOpen}
@@ -44,7 +53,7 @@ export function NavBar() {
             </li>
             <li>
               <CustomLink
-                type="Mis trabajos"
+                type="Obras"
                 route="/mis-trabajos"
                 variant="menu"
                 onClick={handleToggle}

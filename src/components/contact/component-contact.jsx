@@ -75,7 +75,7 @@ export function ContactForm() {
         <div className="contact-links-container">
           <CustomLink type="Home" route="/" variant="secondary" />
           <CustomLink
-            type="Mis trabajos"
+            type="Obras"
             route="/mis-trabajos"
             variant="primary"
           />
