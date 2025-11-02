@@ -13,6 +13,7 @@ nav {
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 8px;
+    margin-bottom: 30px;
 }
 
 nav button {
@@ -33,7 +34,7 @@ nav button {
 .dropdown-menu {
     position: absolute;
     width: 100%;
-    top: 0;
+    top: 70px;
     background-color: rgb(0, 0, 0);
     list-style: none;
     margin: 0;
@@ -50,6 +51,7 @@ nav button {
 .dropdown-menu li a {
     color: white;
     text-decoration: none;
+    text-align: center;
     font-size: 14px;
 }
 
@@ -59,7 +61,7 @@ nav button {
 
 .menu-overlay {
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     width: 100vw;
     height: 100vh;

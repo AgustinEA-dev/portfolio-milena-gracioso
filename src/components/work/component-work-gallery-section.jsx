@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { plays } from "../../data/plays";
 import { CustomLink } from "../custom-link/component-custom-link";
+import cloudImages from "../../data/cloudinary_images.json";
 
 import "./styles-work-gallery-section.css";
 
@@ -19,13 +20,16 @@ export function WorkGallerySection() {
 
   return (
     <section className="work-gallery-section fade-in">
-      <h1 className="gallery-title">. {obra.title} .</h1>
+      <h1 className="gallery-title"> {obra.title} </h1>
 
       <div className="gallery-grid">
         {obra.imgs?.length > 0 ? (
           obra.imgs.map((img, index) => (
             <div className="gallery-item" key={index}>
-              <img src={img} alt={`${obra.title} ${index + 1}`} />
+              <img
+                src={cloudImages[img.replace(/^\//, "")] || img}
+                alt={`${obra.title} ${index + 1}`}
+              />
             </div>
           ))
         ) : (

@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
     margin: 10px auto;
 }
 
@@ -17,16 +16,16 @@
 
 .cover-container {
     position: relative;
-    background-image: url('../../../public/assets/imgs/img-portada.jpeg');
-    background-size: 100%;
-    background-position: 00% center;
+    background-size: 80%;
     background-repeat: no-repeat;
+    background-position: 175% center;
     border-radius: 50px;
-    width: 100%;
+    width: 90%;
     height: calc(100vh - 100px);
     display: flex;
     margin: auto;
 }
+
 
 .cover-container::before,
 .cover-container::after {
@@ -309,7 +308,7 @@
         background-size: 100%;
         background-position: 80% center;
         background-color: #000;
-        background-image: url('../../../public/assets/imgs/img-portada.jpg');
+        /* background-image: url('../../../public/assets/imgs/img-portada.jpg'); */
         background-position: center 200px;
     }
 

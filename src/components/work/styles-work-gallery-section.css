@@ -33,7 +33,6 @@
     animation-delay: 4s;
 }
 
-/* --- TITULO --- */
 .gallery-title {
     text-align: center;
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -97,5 +96,13 @@
 
     .gallery-item {
         border-radius: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-item img {
+        aspect-ratio: 2 / 3;
+        /* más vertical */
+        object-fit: cover;
     }
 }
