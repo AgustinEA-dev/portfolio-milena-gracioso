@@ -76,6 +76,9 @@ export const plays = [
         imgs:
             [
                 "/assets/imgs/die-machine-foto5.jpg",
+                "/assets/imgs/die-machine-foto2.jpg",
+                "/assets/imgs/die-machine-foto3.jpeg",
+                "/assets/imgs/die-machine-foto1.jpeg",
             ],
     },
     {
@@ -87,10 +90,10 @@ export const plays = [
         rol: "Adela",
         year: "2022",
         imgs: [
-            "/assets/imgs/bernarda-alba-foto8.jpeg",
+            "/assets/imgs/bernarda-alba-foto5.jpeg",
+            "/assets/imgs/bernarda-alba-foto6.jpeg",
+            "/assets/imgs/bernarda-alba-foto2.jpeg",
+            "/assets/imgs/bernarda-alba-foto1.jpeg",
         ],
     },
-
-
-    // Repetir para cada obra con su id único
 ];

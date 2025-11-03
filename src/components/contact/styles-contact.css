@@ -104,6 +104,22 @@
     flex-wrap: wrap;
 }
 
+.input-error-border {
+    border-color: #ff6b6b !important;
+    box-shadow: 0 0 4px #ff6b6b88;
+}
+
+.input-valid-border {
+    border-color: #6bff99 !important;
+    box-shadow: 0 0 4px #6bff9988;
+}
+
+.input-error {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
 @media (max-width: 760px) {
     .contact-section {
         width: 85%;

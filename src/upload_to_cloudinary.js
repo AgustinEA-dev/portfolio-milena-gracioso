@@ -1,4 +1,3 @@
-// upload_to_cloudinary.js
 require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
@@ -33,8 +32,6 @@ async function walk(dir) {
 }
 
 function keyFromFilepath(filepath) {
-  // Queremos la clave relativa tal como la referenciás desde public:
-  // ej: public/assets/imgs/folder/pic.jpg -> assets/imgs/folder/pic.jpg
   const parts = filepath.split(path.sep);
   const idx = parts.indexOf("public");
   if (idx >= 0) {
@@ -48,11 +45,8 @@ async function uploadAll() {
   const mapping = {};
 
   for (const file of files) {
-    const relativeKey = keyFromFilepath(file); // "assets/imgs/..."
-    // Subir a Cloudinary y conservar subcarpeta "portfolio" + la ruta relativa dentro de imgs
-    // Por ejemplo folder structure en cloud: portfolio/assets/imgs/...
-    // Ajustá "folder" si querés otra carpeta.
-    const folderInCloud = `portfolio/${relativeKey.replace(/\/[^/]+$/, "")}`; // carpeta sin el filename
+    const relativeKey = keyFromFilepath(file);
+    const folderInCloud = `portfolio/${relativeKey.replace(/\/[^/]+$/, "")}`;
     try {
       console.log("Subiendo:", relativeKey);
       const res = await cloudinary.uploader.upload(file, {
